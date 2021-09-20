@@ -8,10 +8,10 @@
         <router-link :to="{'name': 'Category', params: {category: 'Hot Coffee'} }">Hot Coffees</router-link>
       </div>
       <div class="side-nav-item">
-        <router-link :to="{'name': 'Category', params: {category: 'Hot Tea'} }">Hot Teas</router-link>
+        <router-link :to="{'name': 'Category', params: {category: 'Hot Teas'} }">Hot Teas</router-link>
       </div>
       <div class="side-nav-item">
-        <router-link :to="{'name': 'Category', params: {category: 'Hot Drink'} }">Hot Drinks</router-link>
+        <router-link :to="{'name': 'Category', params: {category: 'Hot Drinks'} }">Hot Drinks</router-link>
       </div>
       <div class="side-nav-item">
         <router-link :to="{'name': 'Category', params: {category: 'Frappés'} }">Frappés</router-link>
