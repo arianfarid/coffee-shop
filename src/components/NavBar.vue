@@ -1,5 +1,5 @@
 <template>
-  <div id="nav" class="p-4 shadow mb-2">
+  <div id="nav" class="p-4 shadow z-50">
     <div class="flex items-center grid-rows-1">
       <div class="logo">
         Logo
