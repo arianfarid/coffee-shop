@@ -1,23 +1,22 @@
 <template>
   <div id="nav" class="p-4 shadow mb-2">
     <div class="flex items-center grid-rows-1">
-      <div class="
-      rounded-full bg-indigo-600 h-12 w-12 flex items-center justify-center mr-6 uppercase font-black text-white">
+      <div class="logo">
         Logo
       </div>
       <!-- Larger screens menu -->
       <div class="hidden md:block">
-        <router-link class="uppercase font-bold border-b-4 pb-7 border-indigo-600 tracking-wider hover:text-indigo-600 mr-6 transition ease-in-out duration-200" to="/">Menu</router-link>
-        <router-link class="uppercase font-bold tracking-wider hover:text-indigo-600 mr-6 transition ease-in-out duration-200" to="/giftcards">Gift Cards</router-link>
-        <router-link class="uppercase font-bold tracking-wider hover:text-indigo-600 mr-6 transition ease-in-out duration-200" to="/about">About</router-link>
+        <router-link class="nav-link-upper border-b-4 pb-7 border-indigo-600 " to="/menu">Menu</router-link>
+        <router-link class="nav-link-upper" to="/giftcards">Gift Cards</router-link>
+        <router-link class="nav-link-upper" to="/about">About</router-link>
       </div>
       <div class="hidden md:block absolute right-0">
-        <router-link class="font-semibold hover:text-indigo-600 pr-6" to="/findstore">Find a store</router-link>
-        <router-link class="font-semibold hover:text-indigo-600 pr-6" to="/findstore">
-          <button class="border pt-1 pb-1 pl-4 pr-4 rounded-full border-indigo-600 hover:bg-gray-50 transition ease-in-out duration-200 transform active:scale-95">Sign in</button>
+        <router-link class="nav-link" to="/findstore">Find a store</router-link>
+        <router-link class="nav-link" to="/findstore">
+          <button class="btn-pill btn-light transition ease-in-out btn-animate">Sign in</button>
         </router-link>
-        <router-link class="font-semibold hover:text-indigo-600 pr-6" to="/findstore">
-          <button class="border pt-1 pb-1 pl-4 pr-4 rounded-full bg-indigo-600 text-white border-indigo-600 hover:bg-indigo-400 hover:border-indigo-400 transition ease-in-out duration-200 transform active:scale-95">
+        <router-link class="nav-link" to="/findstore">
+          <button class="btn-pill btn-dark transition ease-in-out btn-animate">
             Join now</button>
         </router-link>
       </div>
@@ -44,3 +43,26 @@
 // }
 
 </script>
+<style>
+.btn-animate {
+ @apply duration-200 transform active:scale-95;
+}
+.btn-dark {
+ @apply bg-indigo-600 text-white border-indigo-600 hover:bg-indigo-400 hover:border-indigo-400;
+}
+.btn-light {
+ @apply border-indigo-600 hover:bg-gray-50;
+}
+.btn-pill {
+ @apply border pt-1 pb-1 pl-4 pr-4 rounded-full;
+}
+.logo {
+ @apply rounded-full bg-indigo-600 h-12 w-12 flex items-center justify-center mr-6 uppercase font-black text-white;
+}
+.nav-link-upper {
+ @apply uppercase font-bold tracking-wider hover:text-indigo-600 mr-6 transition ease-in-out duration-200;
+}
+.nav-link {
+ @apply font-semibold hover:text-indigo-600 pr-6;
+}
+</style>
