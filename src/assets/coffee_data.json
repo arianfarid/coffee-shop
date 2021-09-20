@@ -1,0 +1,158 @@
+[
+{
+    'id': 1,
+    'category': 'Hot Coffee',
+    'sub_category': 'Americano',
+    'name': 'Caffè Americano',
+    'price': 3.50,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+{
+    'id': 2,
+    'category': 'Hot Coffee',
+    'sub_category': 'Brewed Coffee',
+    'name': 'Light Roast',
+    'price': 2,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+{
+    'id': 3,
+    'category': 'Hot Coffee',
+    'sub_category': 'Brewed Coffee',
+    'name': 'Medium Roast',
+    'price': 2,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+{
+    'id': 4,
+    'category': 'Hot Coffee',
+    'sub_category': 'Brewed Coffee',
+    'name': 'Dark Roast',
+    'price': 2,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+
+{
+    'id': 5,
+    'category': 'Hot Coffee',
+    'sub_category': 'Brewed Coffee',
+    'name': 'Cafè Au Lait',
+    'price': 3.50,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+{
+    'id': 6,
+    'category': 'Hot Coffee',
+    'sub_category': 'Lattes and More',
+    'name': 'Cappuccino',
+    'price': 3.50,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+{
+    'id': 7,
+    'category': 'Hot Coffee',
+    'sub_category': 'Lattes and More',
+    'name': 'Flat White',
+    'price': 4.50,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+{
+    'id': 8,
+    'category': 'Hot Coffee',
+    'sub_category': 'Lattes and More',
+    'name': 'Honey Christmas Flat White',
+    'price': 4.50,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+{
+    'id': 9,
+    'category': 'Hot Coffee',
+    'sub_category': 'Lattes and More',
+    'name': 'Caffè Latte',
+    'price': 3.50,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+{
+    'id': 10,
+    'category': 'Hot Coffee',
+    'sub_category': 'Lattes and More',
+    'name': 'Cinnamon Melt Latte',
+    'price': 4.50,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+
+},
+{
+    'id': 11,
+    'category': 'Hot Coffee',
+    'sub_category': 'Lattes and More',
+    'name': 'Spicy Pumpkin',
+    'price': 4.50,
+    'description': '',
+    'nutrition':
+    {
+        'calories': 5
+    },
+    'image': '',
+
+},
+ ]
