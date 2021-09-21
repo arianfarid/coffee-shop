@@ -4,7 +4,7 @@
     "category": "Hot Coffee",
     "sub_category": "Americano",
     "name": "Caffè Americano",
-    "price": 3.50,
+    "price": "3.50",
     "description": "",
     "nutrition":
     {
@@ -17,7 +17,7 @@
     "category": "Hot Coffee",
     "sub_category": "Brewed Coffee",
     "name": "Light Roast",
-    "price": 2,
+    "price": "2.00",
     "description": "",
     "nutrition":
     {
@@ -30,7 +30,7 @@
     "category": "Hot Coffee",
     "sub_category": "Brewed Coffee",
     "name": "Medium Roast",
-    "price": 2,
+    "price": "2.00",
     "description": "",
     "nutrition":
     {
@@ -43,7 +43,7 @@
     "category": "Hot Coffee",
     "sub_category": "Brewed Coffee",
     "name": "Dark Roast",
-    "price": 2,
+    "price": "2.00",
     "description": "",
     "nutrition":
     {
@@ -57,7 +57,7 @@
     "category": "Hot Coffee",
     "sub_category": "Brewed Coffee",
     "name": "Cafè Au Lait",
-    "price": 3.50,
+    "price": "3.50",
     "description": "",
     "nutrition":
     {
@@ -70,7 +70,7 @@
     "category": "Hot Coffee",
     "sub_category": "Lattes and More",
     "name": "Cappuccino",
-    "price": 3.50,
+    "price": "3.50",
     "description": "",
     "nutrition":
     {
@@ -83,7 +83,7 @@
     "category": "Hot Coffee",
     "sub_category": "Lattes and More",
     "name": "Flat White",
-    "price": 4.50,
+    "price": "4.50",
     "description": "",
     "nutrition":
     {
@@ -96,7 +96,7 @@
     "category": "Hot Coffee",
     "sub_category": "Lattes and More",
     "name": "Honey Christmas Flat White",
-    "price": 4.50,
+    "price": "4.50",
     "description": "",
     "nutrition":
     {
@@ -109,7 +109,7 @@
     "category": "Hot Coffee",
     "sub_category": "Lattes and More",
     "name": "Caffè Latte",
-    "price": 3.50,
+    "price": "3.50",
     "description": "",
     "nutrition":
     {
@@ -122,7 +122,7 @@
     "category": "Hot Coffee",
     "sub_category": "Lattes and More",
     "name": "Cinnamon Melt Latte",
-    "price": 4.50,
+    "price": "4.50",
     "description": "",
     "nutrition":
     {
@@ -136,7 +136,7 @@
     "category": "Hot Coffee",
     "sub_category": "Lattes and More",
     "name": "Spicy Pumpkin",
-    "price": 4.50,
+    "price": "4.50",
     "description": "",
     "nutrition":
     {
@@ -149,7 +149,7 @@
     "category": "Hot Teas",
     "sub_category": "Chai Teas",
     "name": "Chai Tea Latte",
-    "price": 4.50,
+    "price": "4.50",
     "description": "",
     "nutrition":
     {
@@ -162,7 +162,7 @@
     "category": "Hot Teas",
     "sub_category": "Chai Teas",
     "name": "Dirty Chai Tea Latte",
-    "price": 5.50,
+    "price": "5.50",
     "description": "",
     "nutrition":
     {

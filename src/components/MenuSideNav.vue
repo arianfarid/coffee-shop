@@ -1,5 +1,5 @@
 <template>
-  <div class="w-80 bg-white hidden md:flex md:flex-none pl-20 overflow-y-auto h-screen">
+  <div class="w-72 bg-white hidden md:flex md:flex-none overflow-y-auto h-screen border-gray-200 border-r border-b rounded-br mr-4">
     <div>
       <div class="side-nav-item-category">
         Drinks
@@ -66,10 +66,10 @@
 </template>
 <style>
 .side-nav-item-category {
-  @apply pl-2 pr-2 text-lg font-semibold mt-2 mb-2;
+  @apply w-72 pl-12 pr-2 text-lg font-semibold mb-2 border-gray-200 border-b border-t;
 }
 .side-nav-item {
-  @apply pl-3 pr-2 text-base text-gray-700 mt-2 mb-2;
+  @apply w-72 pl-16 pr-2 text-base text-gray-700 pt-2 pb-2 hover:bg-gray-50 cursor-pointer;
 }
 
 </style>
