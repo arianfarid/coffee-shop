@@ -6,14 +6,19 @@
       <!-- panel for navigating menu items -->
       <menu-side-nav></menu-side-nav>
       <!-- panel for drinks -->
-      <div class="font-bold text-lg tracking-wide">
-        {{route.params.category}}
-      </div>
-      <div class="w-96 bg-white flex flex-none pl-20 grid grid-cols-1">
-        <div v-for="sub_category in drink_subcategories">
-          {{sub_category}}
+      <div class="grid-cols-1">
+        <div class="font-bold text-lg tracking-wide">
+          {{route.params.category}}
         </div>
-<!--         <div v-for="drink in coffee_data" v-bind:key="drink.id">
+        <div class="bg-white flex flex-none grid grid-cols-1">
+          <div class="font-bold text-base" v-for="sub_category in drinkCategories" v-bind:key="sub_category.id">
+            {{sub_category.sub_category}}
+            <div class="font-normal text-base" v-for="drink in sub_category.drinks" v-bind:key="drink.id">
+              {{drink.name}}
+            </div>
+          </div>
+        </div>
+        <!--         <div v-for="drink in drinkData" v-bind:key="drink.id">
           <div>{{ drink.name }}</div>
         </div> -->
       </div>
@@ -36,26 +41,38 @@ export default {
   },
   setup () {
     const route = useRoute()
-    const coffee_data = ref(coffeeData.filter(drink => drink.category === route.params.category));
+    const drinkData = ref(coffeeData.filter(drink => drink.category === route.params.category))
 
-    const getSubcategories = (current_drinks) => {
-      return current_drinks.reduce((subcategories, drink) => {
-        //if subcateogry not in array, add it
-        if (!subcategories.includes(drink.sub_category)) {
-          subcategories.push(drink.sub_category)
+    const getSubcategories = (currentDrinks) => {
+      return currentDrinks.reduce((subcategories, drink, index) => {
+        // if subcategory not in array, add it
+        if (!subcategories.some(e => e.sub_category === drink.sub_category)) {
+          subcategories.push({
+            id: subcategories.length + 1,
+            sub_category: drink.sub_category,
+            drinks: []
+          })
         }
+        // add drinks to newly structured data
+        // find current category of current drink, then push the drink
+        subcategories[subcategories.map(e => e.sub_category).indexOf(drink.sub_category)]
+          .drinks.push(
+            {
+              id: drink.id,
+              name: drink.name
+            }
+          )
         return subcategories
-      },[])
+      }, [])
     }
-    const drink_subcategories = ref(getSubcategories(coffee_data.value))
+    const drinkCategories = ref(getSubcategories(drinkData.value))
     watch(() => route.params.category, () => {
-      coffee_data.value = coffeeData.filter(drink => drink.category === route.params.category)
-      drink_subcategories.value = getSubcategories(coffee_data.value)
-      console.log(drink_subcategories)
-    });
+      drinkData.value = coffeeData.filter(drink => drink.category === route.params.category)
+      drinkCategories.value = getSubcategories(drinkData.value)
+    })
     return {
-      coffee_data,
-      drink_subcategories,
+      drinkData,
+      drinkCategories,
       route
     }
   }
