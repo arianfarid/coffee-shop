@@ -1,5 +1,5 @@
 <template>
-  <div class="w-96 bg-white hidden md:flex md:flex-none pl-20 overflow-y-auto h-screen">
+  <div class="w-80 bg-white hidden md:flex md:flex-none pl-20 overflow-y-auto h-screen">
     <div>
       <div class="side-nav-item-category">
         Drinks

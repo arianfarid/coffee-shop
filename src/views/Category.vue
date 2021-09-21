@@ -7,22 +7,20 @@
       <menu-side-nav></menu-side-nav>
       <!-- panel for drinks -->
       <div class="grid-cols-1">
-        <div class="font-bold text-lg tracking-wide">
+        <div class="font-bold text-2xl tracking-wide">
           {{route.params.category}}
         </div>
         <div class="bg-white flex flex-none grid grid-cols-1">
-          <div class="font-bold text-base" v-for="sub_category in drinkCategories" v-bind:key="sub_category.id">
+          <div class="font-bold text-xl" v-for="sub_category in drinkCategories" v-bind:key="sub_category.id">
             {{sub_category.sub_category}}
-            <div class="font-normal text-base" v-for="drink in sub_category.drinks" v-bind:key="drink.id">
-              {{drink.name}}
+            <div class="flex flex-wrap">
+              <div class="font-normal text-base" v-for="drink in sub_category.drinks" v-bind:key="drink.id">
+                <item-card :data="drink"></item-card>
+              </div>
             </div>
           </div>
         </div>
-        <!--         <div v-for="drink in drinkData" v-bind:key="drink.id">
-          <div>{{ drink.name }}</div>
-        </div> -->
       </div>
-      <br>
     </div>
   </div>
 </template>
@@ -32,10 +30,12 @@ import { ref, watch } from 'vue'
 // @ is an alias to /src
 import SubMenu from '@/components/SubMenu.vue'
 import MenuSideNav from '@/components/MenuSideNav.vue'
+import ItemCard from '@/components/ItemCard.vue'
 import coffeeData from '@/assets/coffee_data.json'
 export default {
   name: 'Category',
   components: {
+    ItemCard,
     MenuSideNav,
     SubMenu
   },
@@ -56,12 +56,12 @@ export default {
         // add drinks to newly structured data
         // find current category of current drink, then push the drink
         subcategories[subcategories.map(e => e.sub_category).indexOf(drink.sub_category)]
-          .drinks.push(
-            {
-              id: drink.id,
-              name: drink.name
-            }
-          )
+          .drinks.push({
+            id: drink.id,
+            name: drink.name,
+            price: drink.price,
+            calories: drink.nutrition.calories
+          })
         return subcategories
       }, [])
     }
