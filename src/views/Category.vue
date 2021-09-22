@@ -12,7 +12,7 @@
         </div>
         <div class="bg-white flex flex-none grid grid-cols-1">
           <div class="font-bold text-xl" v-for="sub_category in drinkCategories" v-bind:key="sub_category.id">
-            {{sub_category.sub_category}}
+            <div class="py-2">{{sub_category.sub_category}}</div>
             <div class="flex flex-wrap">
               <div class="font-normal text-base" v-for="drink in sub_category.drinks" v-bind:key="drink.id">
                 <item-card :data="drink" @toggled-favorite="toggleFavorite($event)" :favorite="returnFavorite(drink.id)"></item-card>
