@@ -15,7 +15,7 @@
             {{sub_category.sub_category}}
             <div class="flex flex-wrap">
               <div class="font-normal text-base" v-for="drink in sub_category.drinks" v-bind:key="drink.id">
-                <item-card :data="drink"></item-card>
+                <item-card :data="drink" @toggled-favorite="toggleFavorite($event)" :favorite="returnFavorite(drink.id)"></item-card>
               </div>
             </div>
           </div>
@@ -26,7 +26,7 @@
 </template>
 <script>
 import { useRoute } from 'vue-router'
-import { ref, watch } from 'vue'
+import { inject, ref, watch } from 'vue'
 // @ is an alias to /src
 import SubMenu from '@/components/SubMenu.vue'
 import MenuSideNav from '@/components/MenuSideNav.vue'
@@ -42,7 +42,6 @@ export default {
   setup () {
     const route = useRoute()
     const drinkData = ref(coffeeData.filter(drink => drink.category === route.params.category))
-
     const getSubcategories = (currentDrinks) => {
       return currentDrinks.reduce((subcategories, drink, index) => {
         // if subcategory not in array, add it
@@ -66,6 +65,10 @@ export default {
       }, [])
     }
     const drinkCategories = ref(getSubcategories(drinkData.value))
+
+    const toggleFavorite = inject('toggleFavorite')
+    const returnFavorite = inject('returnFavorite')
+
     watch(() => route.params.category, () => {
       drinkData.value = coffeeData.filter(drink => drink.category === route.params.category)
       drinkCategories.value = getSubcategories(drinkData.value)
@@ -73,6 +76,8 @@ export default {
     return {
       drinkData,
       drinkCategories,
+      returnFavorite,
+      toggleFavorite,
       route
     }
   }

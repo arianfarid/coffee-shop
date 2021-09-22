@@ -827,7 +827,7 @@ module.exports = {
     alignContent: ['responsive'],
     alignItems: ['responsive'],
     alignSelf: ['responsive'],
-    animation: ['responsive'],
+    animation: ['responsive', 'hover', 'focus'],
     appearance: ['responsive'],
     backdropBlur: ['responsive'],
     backdropBrightness: ['responsive'],

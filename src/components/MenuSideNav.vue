@@ -25,7 +25,7 @@
       <div class="side-nav-item">
         <router-link :to="{'name': 'Category', params: {category: 'Cold Drinks'} }">Cold Drinks</router-link>
       </div>
-      <div class="side-nav-item-category">
+      <div class="side-nav-item-category border-t">
         Food
       </div>
       <div class="side-nav-item">
@@ -40,7 +40,7 @@
       <div class="side-nav-item">
         <router-link :to="{'name': 'Category', params: {category: 'Pastries'} }">Pastries</router-link>
       </div>
-      <div class="side-nav-item-category">
+      <div class="side-nav-item-category border-t">
         For the Home
       </div>
       <div class="side-nav-item">
@@ -49,7 +49,7 @@
       <div class="side-nav-item">
         <router-link :to="{'name': 'Category', params: {category: 'Instant'} }">Instant</router-link>
       </div>
-      <div class="side-nav-item-category">
+      <div class="side-nav-item-category border-t">
         Merch
       </div>
       <div class="side-nav-item">
@@ -66,10 +66,10 @@
 </template>
 <style>
 .side-nav-item-category {
-  @apply w-72 pl-12 pr-2 text-lg font-semibold mb-2 border-gray-200 border-b border-t;
+  @apply w-72 pl-12 pr-2 text-lg font-semibold mb-2 border-gray-200 border-b;
 }
 .side-nav-item {
-  @apply w-72 pl-16 pr-2 text-base text-gray-700 pt-2 pb-2 hover:bg-gray-50 cursor-pointer;
+  @apply w-72 pl-16 pr-2 text-base text-gray-700 pt-1 pb-1 hover:bg-gray-50 cursor-pointer;
 }
 
 </style>
