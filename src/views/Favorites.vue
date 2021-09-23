@@ -10,7 +10,7 @@
         <div class="font-bold text-2xl tracking-wide">
           Favorites
         </div>
-        <div class="bg-white flex flex-none grid grid-cols-1">
+        <div class="bg-white flex flex-wrap">
           <div class="font-normal text-base" v-for="drink in favoritesFiltered" v-bind:key="drink">
             <item-card :data="drink" @toggled-favorite="toggleFavorite($event)" :favorite="returnFavorite(drink.id)"></item-card>
           </div>
