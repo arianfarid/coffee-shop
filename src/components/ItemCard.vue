@@ -52,5 +52,4 @@ export default {
     }
   }
 }
-//add animations??
 </script>
