@@ -2,9 +2,12 @@
   <div class='home'>
     <!-- a sub menu component for featured drinks, faves, etc -->
     <sub-menu></sub-menu>
-    <div class='flex'>
+    <div class='grid grid-rows-2 grid-cols-1 h-full sm:flex'>
       <!-- panel searching stores, and listing them -->
-      <div class='hidden md:flex md:flex-none grid grid-cols-1 left-0 w-72 overflow-y-auto h-screen border-gray-200 border-r border-b rounded-br'>
+      <div class='row-start-2 bg-white border-gray-200 border-r border-b rounded-br overflow-y-auto
+      h-48
+      sm:row-start-1 sm:flex sm:flex-none
+      grid grid-cols-1 sm:left-0 sm:w-72 sm:h-screen '>
         <div class='m-4 inline'>
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -14,9 +17,10 @@
         </div>
       </div>
       <!-- Map, should go on right on bigger screens, smaller height and center fill width on smaller screen -->
-      <div class="h-36 w-full relative">
-        <div class="h-36 w-full">
-          <l-map style='height:50vh' :zoom="2" class="h-36">
+      <div class="row-start-1 h-36 w-full relative
+      sm:row-start-2 sm:block">
+        <div class="h-auto w-full">
+          <l-map style='height:50vh' :zoom="2" >
             <l-geo-json :geojson='geojson' />
             <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap" :max-zoom="10"></l-tile-layer>
           </l-map>
